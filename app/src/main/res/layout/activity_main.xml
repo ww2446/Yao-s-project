@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:background="#F9FBE7"
+    tools:context="com.yaoc.inclassassignment05_yaoc.MainActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#F57F17"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="What did you have?"/>
+
+            <EditText
+                android:id="@+id/what_you_ate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Type in the restaurant, food, etc"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#F57F17"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="How much did you spent?"/>
+
+            <EditText
+                android:id="@+id/price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Type in the number only"/>
+
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="How was it?"
+                    android:textColor="#F57F17"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+                <RadioButton
+                    android:id="@+id/deliciou"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="It was delicious!!!"
+                    android:onClick="emotionClicked"/>
+
+                <RadioButton
+                    android:id="@+id/notBad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Not bad."
+                    android:onClick="emotionClicked"/>
+
+                <RadioButton
+                    android:id="@+id/bad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ewww, never will go there again."
+                    android:onClick="emotionClicked"/>
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#F57F17"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="Other Notes"/>
+
+            <CheckBox
+                android:id="@+id/spicy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Spicy"
+                android:onClick="onCheckboxClicked"
+                />
+
+            <CheckBox
+                android:id="@+id/healthy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Healthy"
+                android:onClick="onCheckboxClicked"/>
+
+            <CheckBox
+                android:id="@+id/onDiet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="On a diet"
+                android:onClick="onCheckboxClicked"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ADD"
+                    android:textColor="#FFFDE7"
+                    android:layout_margin="10dp"
+                    android:background="#FFAB91"
+                    android:onClick="add"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DISPLAY"
+                    android:textColor="#FFFDE7"
+                    android:background="#FFAB91"
+                    android:layout_margin="10dp"
+                    android:onClick="display"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:src="@drawable/hum"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:text="Record what you ate"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#F57F17"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>
